@@ -1,0 +1,16 @@
+data:
+  firstName: &fname Magnus
+  secondName: &sname Theodore
+  dob: &dob February 14, 2021
+name:
+  - *fname
+  - *sname
+stats:
+  - *fname
+  - was born on
+  - *dob
+  - and weighed
+  - 9.05lb
+  - and measured
+  - 20"
+  - in length.
