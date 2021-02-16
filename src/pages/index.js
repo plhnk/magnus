@@ -50,11 +50,12 @@ const IndexPage = () => {
       as="main"
       sx={{
         height: '100vh',
+        gridGap: 0,
         gridTemplateRows: ['2fr 3fr 2fr', null, '1fr 4fr 1fr'],
-        gridTemplateColumns: ['1fr', null, '1fr 1fr'],
+        gridTemplateColumns: ['6em 1fr 6em', '1fr 1fr 1fr', '1fr 1fr'],
         gridTemplateAreas: [
-          null,
-          null,
+          '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
+          '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
           '"spaceTop spaceTop" "img content" "spaceBottom spaceBottom"',
         ],
       }}
@@ -64,20 +65,26 @@ const IndexPage = () => {
       <Header
         content={content.name}
         sx={{
-          ml: ['10vw', 'calc(50vw - 320px)', '8rem'],
-          alignSelf: 'flex-end',
-          gridArea: [null, null, 'content'],
+          alignSelf: 'center',
+          gridArea: ['contentTop', null, 'content'],
+          ml: [0, null, 'calc(10vw - .2ch)'],
+          color: ['red', 'blue', 'green', 'yellow'],
+          width: '1rem',
         }}
       />
       <Hero
         image={data.bannerImage.childImageSharp.fluid}
         text={content.data.dob}
-        sx={{ gridArea: [null, null, 'img'] }}
+        sx={{ gridArea: 'img' }}
       />
       <Content
         image={data.headshot.childImageSharp.fluid}
         text={content.stats}
-        sx={{ gridArea: [null, null, 'content'] }}
+        sx={{
+          gridArea: ['contentBottom', null, 'content'],
+          alignSelf: 'flex-end',
+          ml: [0, null, '10vw'],
+        }}
       />
     </Grid>
   );

@@ -13,6 +13,13 @@ export default function Typography() {
     <>
       <Global
         styles={{
+          html: {
+            fontSize: '16px',
+          },
+        }}
+      />
+      <Global
+        styles={{
           '@font-face': {
             fontFamily: 'Mazius',
             src: `url(${maziuswoff}) format('woff'), url(${maziuswoff2}) format('woff2') `,

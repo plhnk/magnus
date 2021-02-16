@@ -1,4 +1,5 @@
 export default {
+  breakpoints: ['40rem', '60rem', '80rem'],
   colors: {
     // Basic Theme Colors
     text: '#F9F0CA',
@@ -64,9 +65,10 @@ export default {
     display: {
       fontFamily: 'display',
       fontWeight: 'initial',
-      lineHeight: .98,
+      lineHeight: 0.98,
       letterSpacing: 'initial',
-      fontSize: ['6rem', '12rem', '10vw'],
+      fontSize: ['6rem', '10vw', '10vw'],
+    //   fontSize: ['6rem', '12rem', '10vw'],
     },
     caps: {
       textTransform: 'uppercase',
@@ -95,7 +97,6 @@ export default {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
-      color: 'main',
     },
   },
 };
