@@ -5,7 +5,11 @@ import { jsx, Heading } from 'theme-ui';
 export default function Header({ content, ...props }) {
   const headline = content.map((i, index) => (
     <span
-      sx={{ '&:nth-of-type(1)': { ml: '-.36ch' }, display: 'block' }}
+      sx={{
+        '&:nth-of-type(1)': { ml: '-.36ch' },
+        transform: ['translateX(-.3ch)', 'translateX(0)'],
+        display: 'block',
+      }}
       key={index}
     >
       {i}

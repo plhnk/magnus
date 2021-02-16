@@ -10,7 +10,7 @@ export default function Stats({ stats, ...props }) {
   const statArray = newArray.map((i, index) => (
     <Text
       as="p"
-      sx={{ '&:nth-of-type(1)': { fontWeight: 'heading' } }}
+      sx={{ '&:nth-of-type(1)': { fontWeight: 'heading' }, lineHeight: 1.5 }}
       key={index}
     >
       <Text as="strong" sx={{ fontWeight: 'body' }}>

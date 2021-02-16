@@ -9,17 +9,16 @@ export default function Content({ image, text, ...props }) {
     <Flex
       sx={{
         justifyContent: 'space-between',
-        width: ['auto', 320],
       }}
       {...props}
     >
       <Stats sx={{ mr: ['auto', '2.5em'] }} stats={text} />
       <Img
         sx={{
-          height: '5em',
-          width: '5em',
+          height: '6em',
+          width: '6em',
           borderRadius: '50%',
-          mr: '-2.5em',
+          mr: '-3em',
         }}
         fluid={image}
       />

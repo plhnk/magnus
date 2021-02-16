@@ -26,7 +26,7 @@ const IndexPage = () => {
           }
         }
       }
-      bannerImage: file(relativePath: { eq: "maground.jpg" }) {
+      bannerImage: file(relativePath: { eq: "main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -35,7 +35,7 @@ const IndexPage = () => {
       }
       headshot: file(relativePath: { eq: "closeup.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
+          fluid(maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -51,8 +51,8 @@ const IndexPage = () => {
       sx={{
         height: '100vh',
         gridGap: 0,
-        gridTemplateRows: ['2fr 3fr 2fr', null, '1fr 4fr 1fr'],
-        gridTemplateColumns: ['6em 1fr 6em', '1fr 1fr 1fr', '1fr 1fr'],
+        gridTemplateRows: ['2fr 4fr 2fr', null, '1fr 4fr 1fr'],
+        gridTemplateColumns: ['2rem 1fr 5rem', '1fr 2fr 1fr', '1fr 1fr'],
         gridTemplateAreas: [
           '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
           '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
@@ -65,11 +65,11 @@ const IndexPage = () => {
       <Header
         content={content.name}
         sx={{
-          alignSelf: 'center',
+          alignSelf: ['flex-end', null, 'center'],
+          mb: ['-.3em', null, 'initial'],
+          zIndex: 10,
           gridArea: ['contentTop', null, 'content'],
           ml: [0, null, 'calc(10vw - .2ch)'],
-          color: ['red', 'blue', 'green', 'yellow'],
-          width: '1rem',
         }}
       />
       <Hero
@@ -82,8 +82,10 @@ const IndexPage = () => {
         text={content.stats}
         sx={{
           gridArea: ['contentBottom', null, 'content'],
-          alignSelf: 'flex-end',
+          alignSelf: ['flex-start', null, 'flex-end'],
           ml: [0, null, '10vw'],
+          mt: ['3rem', null, 'initial'],
+          maxWidth: [null, null, 360],
         }}
       />
     </Grid>

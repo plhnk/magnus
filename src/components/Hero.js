@@ -8,12 +8,14 @@ export default function Hero({ image, text, ...props }) {
   const component = (
     <Box
       sx={{
-        // width: ['80vw', '60vw', '50vw'],
         position: 'relative',
       }}
       {...props}
     >
-      <Img sx={{ height: '100%' }} fluid={image} />
+      <Img
+        sx={{ height: '100%', maxHeight: ['50vh', null, '67vh'] }}
+        fluid={image}
+      />
       <Heart
         sx={{
           position: 'absolute',
@@ -28,3 +30,5 @@ export default function Hero({ image, text, ...props }) {
   );
   return component;
 }
+
+// http://eepurl.com/dJFMOM mailchimp signup

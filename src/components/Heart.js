@@ -31,7 +31,7 @@ export default function Heart({ content, ...props }) {
         sx={{
           fill: 'muted',
           fontSize: 12,
-          letterSpacing: '.2em',
+          letterSpacing: '.23em',
           textTransform: 'uppercase',
           transformOrigin: 'unset',
           animation: 'rotate 20s linear infinite',

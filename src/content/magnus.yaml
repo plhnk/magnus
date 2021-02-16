@@ -1,7 +1,7 @@
 data:
   firstName: &fname Magnus
   secondName: &sname Theodore
-  dob: &dob February 14, 2021
+  dob: &dob 14 February 2021
 name:
   - *fname
   - *sname
