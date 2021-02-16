@@ -15,7 +15,11 @@ export default {
       },
     },
   },
-  fonts: {},
+  fonts: {
+    display: 'Mazius, serif',
+    heading: '"Work Sans", sans-serif',
+    body: '"Work Sans", sans-serif',
+  },
   fontSizes: [
     '.8rem',
     '.9rem',

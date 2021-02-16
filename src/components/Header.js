@@ -12,7 +12,7 @@ export default function Header({ content, ...props }) {
     </span>
   ));
   return (
-    <Heading as="h1" {...props}>
+    <Heading as="h1" sx={{fontFamily:'display'}} {...props}>
       {headline}
     </Heading>
   );

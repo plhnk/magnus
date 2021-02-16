@@ -5,6 +5,7 @@ import { jsx, Grid } from 'theme-ui';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
+import Typography from '../components/Typography';
 
 // styles
 
@@ -58,6 +59,7 @@ const IndexPage = () => {
         ],
       }}
     >
+      <Typography />
       <title>Home Page</title>
       <Header
         content={content.name}
