@@ -62,11 +62,11 @@ export default {
       letterSpacing: 'heading',
     },
     display: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      lineHeight: 'heading',
-      letterSpacing: 'heading',
-      fontSize: [5, 6, 7],
+      fontFamily: 'display',
+      fontWeight: 'initial',
+      lineHeight: .98,
+      letterSpacing: 'initial',
+      fontSize: ['6rem', '12rem', '10vw'],
     },
     caps: {
       textTransform: 'uppercase',
