@@ -21,5 +21,5 @@ export default function Stats({ stats, ...props }) {
       </Text>
     </Text>
   ));
-  return <Box>{statArray}</Box>;
+  return <Box {...props}>{statArray}</Box>;
 }

@@ -12,7 +12,7 @@ export default function Header({ content, ...props }) {
     </span>
   ));
   return (
-    <Heading as="h1" sx={{}}>
+    <Heading as="h1" {...props}>
       {headline}
     </Heading>
   );

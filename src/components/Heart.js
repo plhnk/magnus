@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 
 export default function Heart({ content, ...props }) {
   const circleText = content + ' • ';
@@ -12,10 +12,9 @@ export default function Heart({ content, ...props }) {
       sx={{
         fill: 'none',
         color: 'text',
-        height: '6em',
-        width: '6em',
         overflow: 'visible',
       }}
+      {...props}
     >
       <path
         id="heart"
@@ -35,19 +34,19 @@ export default function Heart({ content, ...props }) {
           letterSpacing: '.2em',
           textTransform: 'uppercase',
           transformOrigin: 'unset',
-          animation: 'rotate 10s linear infinite',
+          animation: 'rotate 20s linear infinite',
           '@keyframes rotate': {
             to: { transform: 'rotate(360deg)' },
             from: { transform: 'rotate(0)' },
           },
         }}
       >
-        <textPath alignment-baseline="top" xlinkHref="#textPath">
+        <textPath alignmentBaseline="top" xlinkHref="#textPath">
           {circleText.repeat(2)}
         </textPath>
       </text>
     </svg>
   );
 
-  return <Box>{icon}</Box>;
+  return icon;
 }

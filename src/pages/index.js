@@ -1,10 +1,10 @@
 /** @jsx jsx */
 
 import { useStaticQuery, graphql } from 'gatsby';
-import { jsx } from 'theme-ui';
+import { jsx, Grid } from 'theme-ui';
 import Header from '../components/Header';
-import Heart from '../components/Heart';
-import Stats from '../components/Stats';
+import Hero from '../components/Hero';
+import Content from '../components/Content';
 
 // styles
 
@@ -25,18 +25,59 @@ const IndexPage = () => {
           }
         }
       }
+      bannerImage: file(relativePath: { eq: "maground.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      headshot: file(relativePath: { eq: "closeup.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
   const content = data.allContentYaml.edges[0].node;
 
   return (
-    <main>
+    <Grid
+      as="main"
+      sx={{
+        height: '100vh',
+        gridTemplateRows: ['2fr 3fr 2fr', null, '1fr 4fr 1fr'],
+        gridTemplateColumns: ['1fr', null, '1fr 1fr'],
+        gridTemplateAreas: [
+          null,
+          null,
+          '"spaceTop spaceTop" "img content" "spaceBottom spaceBottom"',
+        ],
+      }}
+    >
       <title>Home Page</title>
-      <Header content={content.name} />
-      <Stats stats={content.stats} />
-      <Heart content={content.data.dob} />
-    </main>
+      <Header
+        content={content.name}
+        sx={{
+          ml: ['10vw', 'calc(50vw - 320px)', '8rem'],
+          alignSelf: 'flex-end',
+          gridArea: [null, null, 'content'],
+        }}
+      />
+      <Hero
+        image={data.bannerImage.childImageSharp.fluid}
+        text={content.data.dob}
+        sx={{ gridArea: [null, null, 'img'] }}
+      />
+      <Content
+        image={data.headshot.childImageSharp.fluid}
+        text={content.stats}
+        sx={{ gridArea: [null, null, 'content'] }}
+      />
+    </Grid>
   );
 };
 
