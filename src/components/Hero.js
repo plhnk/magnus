@@ -1,13 +1,15 @@
 /** @jsx jsx */
 
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, useColorMode } from 'theme-ui';
 import { useState } from 'react';
 import Heart from '../components/Heart';
 import Img from 'gatsby-image';
+const [mode, setMode] = useColorMode();
 
 export default function Hero({ image, text, ...props }) {
   const randomImage = image[Math.floor(Math.random() * image.length)];
 
+  console.log(image, 'images');
   // need two arrays of images — if its light mode, pull from one set, else the other
 
   function useForceUpdate() {
@@ -26,12 +28,12 @@ export default function Hero({ image, text, ...props }) {
     >
       <Img
         sx={{
-          backgroundColor: `${randomImage.color}`,
+          backgroundColor: `${randomImage.dark.color}`,
           height: '100%',
           maxHeight: ['50vh', null, '67vh'],
-          boxShadow: '0 4em 8em -2em ' + `${randomImage.color}`,
+          boxShadow: '0 4em 8em -2em ' + `${randomImage.dark.color}`,
         }}
-        fluid={randomImage.image}
+        fluid={randomImage.dark.image}
       />
       <Heart
         onClick={refresh}
