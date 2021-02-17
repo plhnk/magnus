@@ -4,7 +4,7 @@ import { jsx, Box } from 'theme-ui';
 import Heart from '../components/Heart';
 import Img from 'gatsby-image';
 
-export default function Hero({ image, text, ...props }) {
+export default function Hero({ image, color, text, ...props }) {
   const component = (
     <Box
       sx={{
@@ -14,20 +14,11 @@ export default function Hero({ image, text, ...props }) {
     >
       <Img
         sx={{
+          backgroundColor: `${color}`,
           height: '100%',
           maxHeight: ['50vh', null, '67vh'],
-          filter: 'blur(80px)',
-          position: 'absolute !important',
-          width: '80%',
-          left: '10%',
-          top: '10%',
-          overflow: 'visible',
-          opacity: 0.8,
+          boxShadow: '0 4em 8em -2em ' + `${color}`,
         }}
-        fluid={image}
-      />
-      <Img
-        sx={{ height: '100%', maxHeight: ['50vh', null, '67vh'] }}
         fluid={image}
       />
       <Heart

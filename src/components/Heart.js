@@ -13,6 +13,7 @@ export default function Heart({ content, ...props }) {
         setMode(next);
       }}
       sx={{
+        display: 'block',
         outline: 'none',
         borderRadius: '50%',
         '&:focus': {
@@ -51,14 +52,15 @@ export default function Heart({ content, ...props }) {
         />
         <g
           sx={{
+            willChange: 'transform',
             transformOrigin: 'unset',
-            animation: 'rotate 20s linear infinite .05s',
+            animation: 'rotate 20s linear infinite',
             '@keyframes rotate': {
               from: {
-                transform: 'rotate(0deg)',
+                transform: 'rotateZ(0deg)',
               },
               to: {
-                transform: 'rotate(360deg)',
+                transform: 'rotateZ(360deg)',
               },
             },
           }}

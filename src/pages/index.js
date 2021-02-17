@@ -31,6 +31,7 @@ const IndexPage = () => {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
+          gatsbyImageData(backgroundColor: "")
         }
       }
       headshot: file(relativePath: { eq: "closeup.jpg" }) {
@@ -38,6 +39,7 @@ const IndexPage = () => {
           fluid(maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid
           }
+          gatsbyImageData(backgroundColor: "")
         }
       }
     }
@@ -75,6 +77,7 @@ const IndexPage = () => {
       />
       <Hero
         image={data.bannerImage.childImageSharp.fluid}
+        color={data.bannerImage.childImageSharp.gatsbyImageData.backgroundColor}
         text={content.data.dob}
         sx={{ gridArea: 'img' }}
       />
