@@ -26,13 +26,17 @@ const IndexPage = () => {
           }
         }
       }
-      bannerImage: file(relativePath: { eq: "main.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-          gatsbyImageData(backgroundColor: "")
-        }
+      banner0: file(relativePath: { eq: "DSCF0419.jpg" }) {
+        ...BannerImage
+      }
+      banner1: file(relativePath: { eq: "DSCF0449.jpg" }) {
+        ...BannerImage
+      }
+      banner2: file(relativePath: { eq: "DSCF0534.jpg" }) {
+        ...BannerImage
+      }
+      banner3: file(relativePath: { eq: "DSCF0546.jpg" }) {
+        ...BannerImage
       }
       headshot: file(relativePath: { eq: "closeup.jpg" }) {
         childImageSharp {
@@ -46,6 +50,26 @@ const IndexPage = () => {
   `);
 
   const content = data.allContentYaml.edges[0].node;
+
+  // const imageArray = data.banner0.childImageSharp.fluid
+  const imageArray = [
+    {
+      image: data.banner0.childImageSharp.fluid,
+      color: data.banner0.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.banner1.childImageSharp.fluid,
+      color: data.banner1.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.banner2.childImageSharp.fluid,
+      color: data.banner2.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.banner3.childImageSharp.fluid,
+      color: data.banner3.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+  ];
 
   return (
     <Grid
@@ -76,8 +100,7 @@ const IndexPage = () => {
         }}
       />
       <Hero
-        image={data.bannerImage.childImageSharp.fluid}
-        color={data.bannerImage.childImageSharp.gatsbyImageData.backgroundColor}
+        image={imageArray}
         text={content.data.dob}
         sx={{ gridArea: 'img' }}
       />

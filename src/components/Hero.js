@@ -4,7 +4,9 @@ import { jsx, Box } from 'theme-ui';
 import Heart from '../components/Heart';
 import Img from 'gatsby-image';
 
-export default function Hero({ image, color, text, ...props }) {
+export default function Hero({ image, text, ...props }) {
+  const randomImage = image[Math.floor(Math.random() * image.length)];
+
   const component = (
     <Box
       sx={{
@@ -14,12 +16,12 @@ export default function Hero({ image, color, text, ...props }) {
     >
       <Img
         sx={{
-          backgroundColor: `${color}`,
+          backgroundColor: `${randomImage.color}`,
           height: '100%',
           maxHeight: ['50vh', null, '67vh'],
-          boxShadow: '0 4em 8em -2em ' + `${color}`,
+          boxShadow: '0 4em 8em -2em ' + `${randomImage.color}`,
         }}
-        fluid={image}
+        fluid={randomImage.image}
       />
       <Heart
         sx={{
