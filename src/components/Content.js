@@ -12,7 +12,10 @@ export default function Content({ image, text, ...props }) {
       }}
       {...props}
     >
-      <Stats sx={{ mr: ['auto', '2.5em'] }} stats={text} />
+      <Stats
+        sx={{ mr: ['auto', '2.5em'], position: 'relative' }}
+        stats={text}
+      />
       <Img
         sx={{
           height: '6em',

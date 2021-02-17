@@ -13,6 +13,19 @@ export default function Hero({ image, text, ...props }) {
       {...props}
     >
       <Img
+        sx={{
+          height: '100%',
+          maxHeight: ['50vh', null, '67vh'],
+          filter: 'blur(80px)',
+          position: 'absolute !important',
+          width: '80%',
+          left: '10%',
+          top: '10%',
+          opacity: 0.8,
+        }}
+        fluid={image}
+      />
+      <Img
         sx={{ height: '100%', maxHeight: ['50vh', null, '67vh'] }}
         fluid={image}
       />
@@ -23,6 +36,7 @@ export default function Hero({ image, text, ...props }) {
           top: 'calc(50% - 3em)',
           height: '6em',
           width: '6em',
+          zIndex: 99,
         }}
         content={text}
       />
@@ -30,5 +44,3 @@ export default function Hero({ image, text, ...props }) {
   );
   return component;
 }
-
-// http://eepurl.com/dJFMOM mailchimp signup

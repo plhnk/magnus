@@ -28,12 +28,10 @@ export default function Heart({ content, ...props }) {
           animation: 'rotate 20s linear infinite .05s',
           '@keyframes rotate': {
             from: {
-              transform: 'rotate(360deg)',
-              '-webkit-transform': 'rotate(360deg)',
+              transform: 'rotate(0deg)',
             },
             to: {
-              transform: 'rotate(0deg)',
-              '-webkit-transform': 'rotate(0deg)',
+              transform: 'rotate(360deg)',
             },
           },
         }}

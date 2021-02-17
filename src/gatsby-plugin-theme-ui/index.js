@@ -54,6 +54,11 @@ export default {
     heading: '-0.05em',
     caps: '0.1em',
   },
+  links: {
+    nice: {
+      color: 'primary',
+    },
+  },
   text: {
     heading: {
       color: 'text',
@@ -68,7 +73,7 @@ export default {
       lineHeight: 0.98,
       letterSpacing: 'initial',
       fontSize: ['16vw', '10vw', '10vw'],
-    //   fontSize: ['6rem', '12rem', '10vw'],
+      //   fontSize: ['6rem', '12rem', '10vw'],
     },
     caps: {
       textTransform: 'uppercase',
@@ -97,6 +102,9 @@ export default {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
+    },
+    a: {
+      variant: 'links.nice',
     },
   },
 };
