@@ -1,10 +1,11 @@
 /** @jsx jsx */
 
-import { jsx, Flex } from 'theme-ui';
+import { jsx, Flex, Button, useColorMode } from 'theme-ui';
 import Stats from '../components/Stats';
 import Img from 'gatsby-image';
 
 export default function Content({ image, text, ...props }) {
+  const [mode, setMode] = useColorMode();
   const component = (
     <Flex
       sx={{
@@ -16,15 +17,28 @@ export default function Content({ image, text, ...props }) {
         sx={{ mr: ['auto', '2.5em'], position: 'relative' }}
         stats={text}
       />
-      <Img
+      <Button
         sx={{
+          variant: 'buttons.invisible',
+          borderRadius: '50%',
           height: '6em',
           width: '6em',
-          borderRadius: '50%',
           mr: '-3em',
         }}
-        fluid={image}
-      />
+        onClick={(e) => {
+          const next = mode === 'dark' ? 'light' : 'dark';
+          setMode(next);
+        }}
+      >
+        <Img
+          sx={{
+            height: 'inherit',
+            width: 'inherit',
+            borderRadius: 'inherit',
+          }}
+          fluid={image}
+        />
+      </Button>
     </Flex>
   );
   return component;

@@ -1,5 +1,22 @@
 export default {
   breakpoints: ['40rem', '60rem', '80rem'],
+  buttons: {
+    invisible: {
+      cursor: 'pointer',
+      display: 'block',
+      background: 'transparent',
+      px: 0,
+      py: 0,
+      m: 0,
+      outline: 'none',
+      '&:focus': {
+        boxShadow: (theme) =>
+          '0px 0px 4px 2px ' +
+          `${theme.colors.secondary}` +
+          ', 0px 0px 2px 4px #FFFFFF;',
+      },
+    },
+  },
   colors: {
     // Basic Theme Colors
     text: '#F9F0CA',
