@@ -51,7 +51,7 @@ const IndexPage = () => {
 
   const content = data.allContentYaml.edges[0].node;
 
-  // const imageArray = data.banner0.childImageSharp.fluid
+  // TODO: need to source light and dark images
   const imageArray = [
     {
       image: data.banner0.childImageSharp.fluid,

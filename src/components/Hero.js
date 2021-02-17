@@ -8,6 +8,8 @@ import Img from 'gatsby-image';
 export default function Hero({ image, text, ...props }) {
   const randomImage = image[Math.floor(Math.random() * image.length)];
 
+  // need two arrays of images — if its light mode, pull from one set, else the other
+
   function useForceUpdate() {
     const [randomImage, setValue] = useState(0); // integer state
     return () => setValue((randomImage) => randomImage + 1); // update the state to force render
