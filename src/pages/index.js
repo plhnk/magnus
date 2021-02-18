@@ -21,28 +21,28 @@ const IndexPage = () => {
           }
         }
       }
-      dark0: file(relativePath: { eq: "DSCF0419.jpg" }) {
+      dark0: file(relativePath: { eq: "dark/DSCF0419.jpg" }) {
         ...BannerImage
       }
-      dark1: file(relativePath: { eq: "DSCF0534.jpg" }) {
+      dark1: file(relativePath: { eq: "dark/DSCF0534.jpg" }) {
         ...BannerImage
       }
-      dark2: file(relativePath: { eq: "DSCF0546.jpg" }) {
+      dark2: file(relativePath: { eq: "dark/DSCF0546.jpg" }) {
         ...BannerImage
       }
-      dark3: file(relativePath: { eq: "DSCF0556.jpg" }) {
+      dark3: file(relativePath: { eq: "dark/DSCF0556.jpg" }) {
         ...BannerImage
       }
-      light0: file(relativePath: { eq: "DSCF0449.jpg" }) {
+      light0: file(relativePath: { eq: "light/DSCF0449.jpg" }) {
         ...BannerImage
       }
-      light1: file(relativePath: { eq: "DSCF0457.jpg" }) {
+      light1: file(relativePath: { eq: "light/DSCF0457.jpg" }) {
         ...BannerImage
       }
-      light2: file(relativePath: { eq: "DSCF0506.jpg" }) {
+      light2: file(relativePath: { eq: "light/DSCF0506.jpg" }) {
         ...BannerImage
       }
-      light3: file(relativePath: { eq: "DSCF0565.jpg" }) {
+      light3: file(relativePath: { eq: "light/DSCF0565.jpg" }) {
         ...BannerImage
       }
       headshot: file(relativePath: { eq: "closeup.jpg" }) {
@@ -62,41 +62,41 @@ const IndexPage = () => {
   const imageArray = [
     {
       dark: [
-        {
-          image: data.dark0.childImageSharp.fluid,
-          color: data.dark0.childImageSharp.gatsbyImageData.backgroundColor,
-        },
-        {
-          image: data.dark1.childImageSharp.fluid,
-          color: data.dark1.childImageSharp.gatsbyImageData.backgroundColor,
-        },
-        {
-          image: data.dark2.childImageSharp.fluid,
-          color: data.dark2.childImageSharp.gatsbyImageData.backgroundColor,
-        },
-        {
-          image: data.dark3.childImageSharp.fluid,
-          color: data.dark3.childImageSharp.gatsbyImageData.backgroundColor,
-        },
+    {
+      image: data.dark0.childImageSharp.fluid,
+      color: data.dark0.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.dark1.childImageSharp.fluid,
+      color: data.dark1.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.dark2.childImageSharp.fluid,
+      color: data.dark2.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.dark3.childImageSharp.fluid,
+      color: data.dark3.childImageSharp.gatsbyImageData.backgroundColor,
+    },
       ],
     },
     {
       light: [
-        {
-          image: data.light0.childImageSharp.fluid,
-          color: data.light0.childImageSharp.gatsbyImageData.backgroundColor,
-        },
-        {
-          image: data.light1.childImageSharp.fluid,
-          color: data.light1.childImageSharp.gatsbyImageData.backgroundColor,
-        },
-        {
-          image: data.light2.childImageSharp.fluid,
-          color: data.light2.childImageSharp.gatsbyImageData.backgroundColor,
-        },
-        {
-          image: data.light3.childImageSharp.fluid,
-          color: data.light3.childImageSharp.gatsbyImageData.backgroundColor,
+    {
+      image: data.light0.childImageSharp.fluid,
+      color: data.light0.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.light1.childImageSharp.fluid,
+      color: data.light1.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.light2.childImageSharp.fluid,
+      color: data.light2.childImageSharp.gatsbyImageData.backgroundColor,
+    },
+    {
+      image: data.light3.childImageSharp.fluid,
+      color: data.light3.childImageSharp.gatsbyImageData.backgroundColor,
         },
       ],
     },
@@ -131,7 +131,7 @@ const IndexPage = () => {
         }}
       />
       <Hero
-        image={imageArray}
+        imageArray={imageArray}
         text={content.data.dob}
         sx={{ gridArea: 'img' }}
       />
