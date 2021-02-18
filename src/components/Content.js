@@ -14,7 +14,10 @@ export default function Content({ image, text, ...props }) {
       {...props}
     >
       <Stats
-        sx={{ mr: ['auto', '2.5em'], position: 'relative' }}
+        sx={{
+          mr: ['auto', '2.5em'],
+          position: 'relative',
+        }}
         stats={text}
       />
       <Button

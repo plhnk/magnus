@@ -106,8 +106,7 @@ const IndexPage = () => {
     <Grid
       as="main"
       sx={{
-        height: '100vh',
-        minHeight: 980,
+        minHeight: '100vh',
         gridGap: 0,
         gridTemplateRows: ['2fr 4fr 2fr', null, '1fr 4fr 1fr'],
         gridTemplateColumns: ['2rem 1fr 5rem', '1fr 2fr 1fr', '1fr 1fr'],
@@ -143,6 +142,7 @@ const IndexPage = () => {
           alignSelf: ['flex-start', null, 'flex-end'],
           ml: [0, null, '10vw'],
           mt: ['3rem', null, 'initial'],
+          mb: ['6rem', null, 'initial'],
           maxWidth: [null, null, 360],
         }}
       />

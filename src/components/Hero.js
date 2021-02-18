@@ -69,15 +69,13 @@ export default function Hero({ imageArray, text, ...props }) {
 
   // const refresh = useForceUpdate();
   const imagePlaceholder = currentImages[initialPic];
-  console.log(currentImages.length, 'current images?');
-  // const imagePlaceholder = initialPic;
 
   const image = (
     <Img
       sx={{
         backgroundColor: `${imagePlaceholder.color}`,
         height: '100%',
-        maxHeight: ['50vh', null, '67vh'],
+        maxHeight: ['80vh', null, '67vh'],
         boxShadow: `${'0 4em 8em -2em ' + imagePlaceholder.color}`,
       }}
       fluid={imagePlaceholder.image}
