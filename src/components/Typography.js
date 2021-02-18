@@ -12,11 +12,15 @@ export default function Typography() {
   const component = (
     <>
       <Global
-        styles={{
+        styles={(theme) => ({
           html: {
             fontSize: '16px',
           },
-        }}
+          '::selection': {
+            backgroundColor: theme.colors.primary,
+            color: 'white',
+          },
+        })}
       />
       <Global
         styles={{

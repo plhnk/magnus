@@ -27,6 +27,11 @@ export default function Content({ image, text, ...props }) {
           height: '6em',
           width: '6em',
           mr: '-3em',
+          transition: 'transform .4s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          '&:hover': {
+            transform: 'scale(1.05) rotate(-8deg)',
+            transition: 'transform .2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          },
         }}
         onClick={(e) => {
           const next = mode === 'dark' ? 'light' : 'dark';

@@ -29,6 +29,7 @@ export default {
       light: {
         text: '#020200',
         background: '#F9F0CA',
+        primary: '#0084ff',
         muted: '#878382',
       },
     },

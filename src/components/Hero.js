@@ -4,6 +4,7 @@ import { jsx, Box, useColorMode } from 'theme-ui';
 import { useState } from 'react';
 import Heart from '../components/Heart';
 import Img from 'gatsby-image';
+import { ScalarLeafs } from 'graphql/validation/rules/ScalarLeafs';
 
 export default function Hero({ imageArray, text, ...props }) {
   const [mode, setMode] = useColorMode();
@@ -27,6 +28,7 @@ export default function Hero({ imageArray, text, ...props }) {
         backgroundColor: `${imagePlaceholder.color}`,
         height: '100%',
         maxHeight: ['80vh', null, '67vh'],
+        height: ['80vh', null, '67vh'],
         boxShadow: `${'0 4em 8em -2em ' + imagePlaceholder.color}`,
       }}
       fluid={imagePlaceholder.image}
@@ -53,6 +55,37 @@ export default function Hero({ imageArray, text, ...props }) {
           width: '6em',
           zIndex: 99,
           cursor: 'pointer',
+          transition:
+            'color .2s ease-in-out, transform .2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          '&:hover': {
+            transform: 'scale(1.2) rotate(-15deg)',
+            color: 'accent',
+            transition:
+              'color .2s ease-in-out, transform .2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          },
+          '&:active > #heart': {
+            animation: 'heartbeat .8s infinite',
+            '@keyframes heartbeat': {
+              '0%': {
+                transform: 'scale( .75 )',
+              },
+              '20%': {
+                transform: 'scale( 1 )',
+              },
+              '40%': {
+                transform: 'scale( .75 )',
+              },
+              '60%': {
+                transform: 'scale( 1 )',
+              },
+              '80%': {
+                transform: 'scale( .75 )',
+              },
+              '100%': {
+                transform: 'scale( .75 )',
+              },
+            },
+          },
         }}
         content={text}
       />

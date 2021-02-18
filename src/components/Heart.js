@@ -49,6 +49,7 @@ export default function Heart({ content, ...props }) {
             fontSize: 12,
             letterSpacing: '.23em',
             textTransform: 'uppercase',
+            textShadow: theme => `${'0 0 4em ' + theme.colors.background}`
           }}
         >
           <textPath alignmentBaseline="top" xlinkHref="#textPath">

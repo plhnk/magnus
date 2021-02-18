@@ -34,7 +34,12 @@ export default function Stats({ stats, ...props }) {
         Want a magnet?{' '}
         <IconButton>
           <svg
-            sx={{ fill: 'currentColor', opacity: 0.4 }}
+            sx={{
+              fill: 'currentColor',
+              opacity: 0.4,
+              height: '1.3em',
+              width: '1.3em',
+            }}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >

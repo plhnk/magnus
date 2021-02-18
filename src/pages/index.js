@@ -115,6 +115,8 @@ const IndexPage = () => {
           '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
           '"spaceTop spaceTop" "img content" "spaceBottom spaceBottom"',
         ],
+        '::selection': {
+            backgroundColor: 'primary',}
       }}
     >
       <Typography />
