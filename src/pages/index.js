@@ -6,6 +6,8 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
 import Typography from '../components/Typography';
+import SEO from '../components/SEO';
+import TimeSensitiveTheme from '../components/TimeSensitiveTheme';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -51,6 +53,13 @@ const IndexPage = () => {
             ...GatsbyImageSharpFluid
           }
           gatsbyImageData(backgroundColor: "")
+        }
+      }
+      ogImage: file(relativePath: { eq: "og-image.jpg" }) {
+        childImageSharp {
+          fixed {
+            src
+          }
         }
       }
     }
@@ -120,8 +129,15 @@ const IndexPage = () => {
         },
       }}
     >
+      <SEO
+        description="The hat trick is complete!"
+        previewImage={data.ogImage.childImageSharp.fixed.src}
+        previewImageAlt="A photo of Magnus with his name and birthday in a layout"
+        keywords="Gatsby, SSR, static site, single page, modern, theme switcher, dark mode"
+        pageTitle="Magnus Theodore | 14 Feb 2021"
+      />
       <Typography />
-      <title>Home Page</title>
+      <TimeSensitiveTheme />
       <Header
         content={content.name}
         sx={{
