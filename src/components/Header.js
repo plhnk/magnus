@@ -29,7 +29,14 @@ export default function Header({ content, ...props }) {
     </span>
   ));
   return (
-    <Heading as="h1" sx={{ variant: 'text.display' }} {...props}>
+    <Heading
+      as="h1"
+      sx={{
+        variant: 'text.display',
+        textShadow: (theme) => `${'.2em .2em 1em ' + theme.colors.background}`,
+      }}
+      {...props}
+    >
       {headline}
     </Heading>
   );

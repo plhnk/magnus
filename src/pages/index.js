@@ -57,7 +57,7 @@ const IndexPage = () => {
       }
       ogImage: file(relativePath: { eq: "og-image.jpg" }) {
         childImageSharp {
-          fixed {
+          fixed(jpegQuality: 100, height: 630, width: 1200) {
             src
           }
         }

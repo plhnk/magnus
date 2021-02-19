@@ -19,9 +19,7 @@ const SEO = ({
       <meta name="twitter:card" content="summary_large_image" />
 
       {/*  Non-Essential, But Recommended */}
-      {previewImageAlt ? (
-        <meta name="twitter:image:alt" content={previewImageAlt} />
-      ) : null}
+      <meta name="twitter:image:alt" content={previewImageAlt} />
 
       {/*  Non-Essential, But Required for Analytics */}
       <meta name="twitter:site" content="@plhnk" />
