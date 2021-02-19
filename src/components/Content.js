@@ -21,6 +21,7 @@ export default function Content({ image, text, ...props }) {
         stats={text}
       />
       <Button
+        name="Theme Toggle"
         sx={{
           variant: 'buttons.invisible',
           borderRadius: '50%',

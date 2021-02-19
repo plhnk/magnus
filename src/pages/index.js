@@ -50,7 +50,7 @@ const IndexPage = () => {
       headshot: file(relativePath: { eq: "closeup.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
           gatsbyImageData(backgroundColor: "")
         }

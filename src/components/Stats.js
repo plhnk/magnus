@@ -42,7 +42,7 @@ export default function Stats({ stats, ...props }) {
         href="http://eepurl.com/dJFMOM"
       >
         Want a magnet?{' '}
-        <IconButton>
+        <IconButton name='External Link'>
           <svg
             sx={{
               fill: 'currentColor',
