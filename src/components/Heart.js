@@ -45,7 +45,7 @@ export default function Heart({ content, ...props }) {
         />
         <text
           sx={{
-            fill: 'muted',
+            fill: 'textSecondary',
             fontSize: 12,
             letterSpacing: '.23em',
             textTransform: 'uppercase',

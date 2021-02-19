@@ -4,7 +4,6 @@ import { jsx, Box, useColorMode } from 'theme-ui';
 import { useState } from 'react';
 import Heart from '../components/Heart';
 import Img from 'gatsby-image';
-import { ScalarLeafs } from 'graphql/validation/rules/ScalarLeafs';
 
 export default function Hero({ imageArray, text, ...props }) {
   const [mode, setMode] = useColorMode();
@@ -30,6 +29,7 @@ export default function Hero({ imageArray, text, ...props }) {
         maxHeight: ['80vh', null, '67vh'],
         height: ['80vh', null, '67vh'],
         boxShadow: `${'0 4em 8em -2em ' + imagePlaceholder.color}`,
+        variant: 'animations.toRight',
       }}
       fluid={imagePlaceholder.image}
     />
@@ -86,6 +86,8 @@ export default function Hero({ imageArray, text, ...props }) {
               },
             },
           },
+          variant: 'animations.scaleIn',
+          animationDelay: '.7s',
         }}
         content={text}
       />

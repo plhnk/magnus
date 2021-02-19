@@ -62,41 +62,41 @@ const IndexPage = () => {
   const imageArray = [
     {
       dark: [
-    {
-      image: data.dark0.childImageSharp.fluid,
-      color: data.dark0.childImageSharp.gatsbyImageData.backgroundColor,
-    },
-    {
-      image: data.dark1.childImageSharp.fluid,
-      color: data.dark1.childImageSharp.gatsbyImageData.backgroundColor,
-    },
-    {
-      image: data.dark2.childImageSharp.fluid,
-      color: data.dark2.childImageSharp.gatsbyImageData.backgroundColor,
-    },
-    {
-      image: data.dark3.childImageSharp.fluid,
-      color: data.dark3.childImageSharp.gatsbyImageData.backgroundColor,
-    },
+        {
+          image: data.dark0.childImageSharp.fluid,
+          color: data.dark0.childImageSharp.gatsbyImageData.backgroundColor,
+        },
+        {
+          image: data.dark1.childImageSharp.fluid,
+          color: data.dark1.childImageSharp.gatsbyImageData.backgroundColor,
+        },
+        {
+          image: data.dark2.childImageSharp.fluid,
+          color: data.dark2.childImageSharp.gatsbyImageData.backgroundColor,
+        },
+        {
+          image: data.dark3.childImageSharp.fluid,
+          color: data.dark3.childImageSharp.gatsbyImageData.backgroundColor,
+        },
       ],
     },
     {
       light: [
-    {
-      image: data.light0.childImageSharp.fluid,
-      color: data.light0.childImageSharp.gatsbyImageData.backgroundColor,
-    },
-    {
-      image: data.light1.childImageSharp.fluid,
-      color: data.light1.childImageSharp.gatsbyImageData.backgroundColor,
-    },
-    {
-      image: data.light2.childImageSharp.fluid,
-      color: data.light2.childImageSharp.gatsbyImageData.backgroundColor,
-    },
-    {
-      image: data.light3.childImageSharp.fluid,
-      color: data.light3.childImageSharp.gatsbyImageData.backgroundColor,
+        {
+          image: data.light0.childImageSharp.fluid,
+          color: data.light0.childImageSharp.gatsbyImageData.backgroundColor,
+        },
+        {
+          image: data.light1.childImageSharp.fluid,
+          color: data.light1.childImageSharp.gatsbyImageData.backgroundColor,
+        },
+        {
+          image: data.light2.childImageSharp.fluid,
+          color: data.light2.childImageSharp.gatsbyImageData.backgroundColor,
+        },
+        {
+          image: data.light3.childImageSharp.fluid,
+          color: data.light3.childImageSharp.gatsbyImageData.backgroundColor,
         },
       ],
     },
@@ -116,7 +116,8 @@ const IndexPage = () => {
           '"spaceTop spaceTop" "img content" "spaceBottom spaceBottom"',
         ],
         '::selection': {
-            backgroundColor: 'primary',}
+          backgroundColor: 'primary',
+        },
       }}
     >
       <Typography />

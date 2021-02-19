@@ -20,15 +20,20 @@ export default {
   colors: {
     // Basic Theme Colors
     text: '#F9F0CA',
+    headline: '#FCF9E8',
+    textSecondary: '#C7C2AD',
     background: '#1C0E04',
     primary: '#E86202',
     secondary: '#0084ff',
-    accent: '#FC3BBA',
+    accent: '#E84500',
     muted: '#7b736e',
     modes: {
       light: {
-        text: '#020200',
-        background: '#F9F0CA',
+        text: '#1C0E04',
+        headline: '#130902',
+        textSecondary: '#68472F',
+        background: '#FCF9E8',
+        // background: '#F9F0CA',
         primary: '#0084ff',
         muted: '#878382',
       },
@@ -86,6 +91,7 @@ export default {
       letterSpacing: 'heading',
     },
     display: {
+      color: 'headline',
       fontFamily: 'display',
       fontWeight: 'initial',
       lineHeight: 0.98,
@@ -114,6 +120,70 @@ export default {
     center: {
       alignItems: 'center',
       justifyContent: 'center',
+    },
+  },
+  animations: {
+    core: {
+      transition: 'transform 0.4s',
+      opacity: 0,
+      willChange: 'transform, opacity',
+    },
+    toTop: {
+      animation: 'toTop 0.5s cubic-bezier(0.5, 1.35, 0.5, 1) forwards',
+      transform: 'translateY(5rem)',
+      variant: 'animations.core',
+      '@keyframes toTop': {
+        '0%': {
+          transform: 'translateY(5rem)',
+          opacity: 0,
+        },
+        '100%': {
+          transform: 'translateY(0)',
+          opacity: 1,
+        },
+      },
+    },
+    toRight: {
+      animation: 'toRight 0.5s cubic-bezier(0.5, 1.35, 0.5, 1) forwards',
+      transform: 'translateX(-30%)',
+      variant: 'animations.core',
+      '@keyframes toRight': {
+        '0%': {
+          transform: 'translateX(-30%)',
+          opacity: 0,
+        },
+        '100%': {
+          transform: 'translateX(0)',
+          opacity: 1,
+        },
+      },
+    },
+    scaleIn: {
+      animation: 'scaleIn 0.3s cubic-bezier(0.5, 1.35, 0.5, 1) forwards',
+      transform: 'scale(.5)',
+      variant: 'animations.core',
+      '@keyframes scaleIn': {
+        '0%': {
+          transform: 'scale(.5)',
+          opacity: 0,
+        },
+        '100%': {
+          transform: 'scale(1)',
+          opacity: 1,
+        },
+      },
+    },
+    opacityIn: {
+      animation: 'opacityIn 0.5s ease-in-out forwards',
+      variant: 'animations.core',
+      '@keyframes opacityIn': {
+        '0%': {
+          opacity: 0,
+        },
+        '100%': {
+          opacity: 1,
+        },
+      },
     },
   },
   styles: {

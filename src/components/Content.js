@@ -43,6 +43,8 @@ export default function Content({ image, text, ...props }) {
             height: 'inherit',
             width: 'inherit',
             borderRadius: 'inherit',
+            variant: 'animations.scaleIn',
+            animationDelay: '.8s',
           }}
           fluid={image}
         />

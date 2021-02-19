@@ -12,7 +12,20 @@ export default function Header({ content, ...props }) {
       }}
       key={index}
     >
-      {i}
+      {i.split('').map(function (char, index) {
+        return (
+          <span
+            aria-hidden="true"
+            key={index}
+            sx={{
+              variant: 'animations.opacityIn',
+              animationDelay: `${0.4 + index / 10 + 's'}`,
+            }}
+          >
+            {char}
+          </span>
+        );
+      })}
     </span>
   ));
   return (
