@@ -26,7 +26,7 @@ export default function Typography() {
         styles={{
           '@font-face': {
             fontFamily: 'Mazius',
-            src: `local('Times'), url(${maziuswoff}) format('woff'), url(${maziuswoff2}) format('woff2') `,
+            src: `url(${maziuswoff}) format('woff'), url(${maziuswoff2}) format('woff2'), local('Times')`,
             fontDisplay: 'swap',
           },
         }}
@@ -35,7 +35,7 @@ export default function Typography() {
         styles={{
           '@font-face': {
             fontFamily: 'Work Sans',
-            src: `local('Helvetica'), url(${workSans}) format('woff')`,
+            src: `url(${workSans}) format('woff'), local('Helvetica')`,
             fontWeight: '400, 800',
             fontDisplay: 'swap',
           },
